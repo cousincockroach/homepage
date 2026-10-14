@@ -1,0 +1,235 @@
+
+body {
+    margin: 0;
+    background-color: #f5e1da;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    flex: 1;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;             
+    justify-content: center;                 
+    padding: 0 10px;             
+}
+
+.about-me {
+    box-sizing: border-box;
+    margin-top: 20px;
+    width: 600px;
+    height: 380px;
+    max-width: 100%;             
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.2em;            
+    padding: 20px;
+    font-weight: 200;
+    background-color: #f6eedf;
+}
+
+.avatar img {
+    display: block;
+    height: 420px;
+    width: 300px;
+    border-radius: 8px;
+    transition: all 2s ease 0s;
+}
+
+.avatar:hover img {
+    background-image: url("avatar_coding.jpeg");
+    transform: rotateY(180deg);
+}
+
+
+/* ==========================================
+   3. CARDS GRID & CARD STYLING
+   ========================================== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 300px); 
+    gap: 20px;                   
+    justify-content: center;
+    max-width: 980px;            
+    width: 100%;                 
+    margin: 0 auto;              
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+.card {
+    height: 350px;
+    width: 100%;                 
+    max-width: 100%;             
+    background-color: rgb(243, 238, 240);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    font-weight: 200;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);                      
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);    
+}
+
+/* Reusable Card Top Banners */
+.card-header {
+    flex: 1;
+    border-radius: 8px 8px 0px 0px;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+/* Individual Project Accent Colors */
+.proj-1 { background: #f70776; }
+.proj-2 { background-color: #f96d00; }
+.proj-3 { background: #76b39d; }
+.proj-4 { background: #906387; }
+.proj-5 { background: #83580b; }
+.proj-6 { background: #05004e; }
+
+/* Card Body Containers */
+.card-body {
+    flex: 1;
+    padding: 15px;             
+    font-size: 0.9rem;         
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #f6eedf;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.head .left p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1;
+}
+
+p {
+    margin: 0;
+    font-size: 0.8em;
+}
+
+.text {
+    font-size: 0.85rem;        
+    line-height: 1.4;          
+    color: #555;               
+    margin: 0;
+    font-weight: 200;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+    flex-shrink: 0;
+}
+
+.footer {
+    flex: 1;
+    margin-top: 80px;
+    background-color: #ffd3b6;
+    color: #221c1c;
+    padding: 60px 10%;         
+    font-family: inherit;
+}
+
+.footer-content {
+    max-width: 800px;
+}
+
+.footer h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer-intro {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.address {
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.address p, .footer-intro {
+    margin: 0 0 5px 0;
+}
+
+.contact-details {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1rem;
+}
+
+.contact-item svg {
+    flex-shrink: 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-icons a {
+    color: #221c1c;
+    transition: opacity 0.2s ease;
+}
+
+.social-icons a:hover {
+    opacity: 0.7; 
+}
+
+
+
+@media (max-width: 1000px) {
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
