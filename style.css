@@ -54,9 +54,7 @@ body {
 }
 
 
-/* ==========================================
-   3. CARDS GRID & CARD STYLING
-   ========================================== */
+
 .cards {
     display: grid;
     grid-template-columns: repeat(3, 300px); 
@@ -88,7 +86,6 @@ body {
     box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);    
 }
 
-/* Reusable Card Top Banners */
 .card-header {
     flex: 1;
     border-radius: 8px 8px 0px 0px;
@@ -101,7 +98,7 @@ body {
     box-sizing: border-box;
 }
 
-/* Individual Project Accent Colors */
+
 .proj-1 { background: #f70776; }
 .proj-2 { background-color: #f96d00; }
 .proj-3 { background: #76b39d; }
@@ -109,7 +106,7 @@ body {
 .proj-5 { background: #83580b; }
 .proj-6 { background: #05004e; }
 
-/* Card Body Containers */
+
 .card-body {
     flex: 1;
     padding: 15px;             
@@ -160,7 +157,8 @@ p {
 .footer {
     flex: 1;
     margin-top: 80px;
-    background-color: #ffd3b6;
+    /* background-color: #ffd3b6; */
+    background-color: #f6eedf;
     color: #221c1c;
     padding: 60px 10%;         
     font-family: inherit;
